@@ -6,8 +6,8 @@ require.config({
 		'picker':'libs/mui.picker.min'
 	},
 	shim:{
-		"picker":{
-			deps:['mui']
+		'picker':{
+			deps:['mui'] // 设置依赖  
 		}
 	}
 })
