@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>柠檬记账首页</title>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/mui.picker.min.css">
+		<link rel="stylesheet" href="css/index.css">
+	</head>
+
+	<body>
+		<!-- 侧滑导航根容器 -->
+		<div class="mui-off-canvas-wrap mui-draggable mui-slide-in">
+			<!-- 菜单容器 -->
+			<aside class="mui-off-canvas-left">
+				<div class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<!-- 菜单具体展示内容 -->
+						...
+					</div>
+				</div>
+			</aside>
+			<!-- 主页面容器 -->
+			<div class="mui-inner-wrap">
+				<!-- 主页面标题 -->
+				<header class="header">
+					<div class="total">
+						<div class="pay-wrap">
+							本月花费
+							<span>8640.00</span>
+						</div>
+						<div class="pay-comming">
+							本月收入
+							<span>12678.00</span>
+						</div>
+						<div class="select-wrap">
+							<span class="select-type">月</span>
+							<span class="select-time">2019-02</span>
+						</div>
+					</div>
+				</header>
+				<div class="mui-content con-wrap">
+					<div class="con-title"></div>
+					<div class="con-content">
+						<section class="bill-wrap">
+							<div class="mui-scroll-wrapper">
+								<div class="mui-scroll">
+									<!--这里放置真实显示的DOM内容-->
+									<ul class="mui-table-view">
+										<li class="mui-table-view-cell">
+											<a class="mui-navigate-right">
+												Item 1
+											</a>
+										</li>
+										<li class="mui-table-view-cell">
+											<a class="mui-navigate-right">
+												Item 2
+											</a>
+										</li>
+										<li class="mui-table-view-cell">
+											<a class="mui-navigate-right">
+												Item 3
+											</a>
+										</li>
+										<li class="mui-table-view-cell">
+											<a class="mui-navigate-right">
+												Item 1
+											</a>
+										</li>
+										<li class="mui-table-view-cell">
+											<a class="mui-navigate-right">
+												Item 2
+											</a>
+										</li>
+										<li class="mui-table-view-cell">
+											<a class="mui-navigate-right">
+												Item 3
+											</a>
+										</li>
+										<li class="mui-table-view-cell">
+											<a class="mui-navigate-right">
+												Item 1
+											</a>
+										</li>
+										<li class="mui-table-view-cell">
+											<a class="mui-navigate-right">
+												Item 2
+											</a>
+										</li>
+										<li class="mui-table-view-cell">
+											<a class="mui-navigate-right">
+												Item 3
+											</a>
+										</li>
+										<li class="mui-table-view-cell">
+											<a class="mui-navigate-right">
+												Item 1
+											</a>
+										</li>
+										<li class="mui-table-view-cell">
+											<a class="mui-navigate-right">
+												 Item 2
+											</a>
+										</li>
+										<li class="mui-table-view-cell">
+											<a class="mui-navigate-right">
+												 Item 3
+											</a>
+										</li>
+										<li class="mui-table-view-cell">
+											<a class="mui-navigate-right">
+												Item 1
+											</a>
+										</li>
+										<li class="mui-table-view-cell">
+											<a class="mui-navigate-right">
+												 Item 2
+											</a>
+										</li>
+										<li class="mui-table-view-cell">
+											<a class="mui-navigate-right">
+												 Item 3
+											</a>
+										</li>
+										<li class="mui-table-view-cell">
+											<a class="mui-navigate-right">
+												Item 1
+											</a>
+										</li>
+										<li class="mui-table-view-cell">
+											<a class="mui-navigate-right">
+												 Item 2
+											</a>
+										</li>
+										<li class="mui-table-view-cell">
+											<a class="mui-navigate-right">
+												 Item 3
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+						</section>
+						<section class="chart-wrap">图表</section>
+					</div>
+				</div>
+				<!-- 底部导航 -->
+				<nav class="mui-bar mui-bar-tab">
+					<a class="mui-tab-item mui-active" href="#tabbar">
+						<span class="mui-icon mui-icon-home"></span>
+						<span class="mui-tab-label">首页</span>
+					</a>
+					<a class="mui-tab-item" href="#tabbar-with-chat">
+						<span class="mui-icon mui-icon-email"><span class="mui-badge">9</span></span>
+						<span class="mui-tab-label">消息</span>
+					</a>
+					<a class="mui-tab-item" href="#tabbar-with-contact">
+						<span class="mui-icon mui-icon-contact"></span>
+						<span class="mui-tab-label">通讯录</span>
+					</a>
+					<a class="mui-tab-item" href="#tabbar-with-map">
+						<span class="mui-icon mui-icon-gear"></span>
+						<span class="mui-tab-label">设置</span>
+					</a>
+				</nav>
+				<!-- off-canvas backdrop -->
+				<div class="mui-off-canvas-backdrop"></div>
+			</div>
+		</div>
+		<script src="js/libs/require.js"></script>
+		<script>
+			require(['js/main'], function() {
+				require(['index'])
+			})
+		</script>
+	</body>
+
+</html>

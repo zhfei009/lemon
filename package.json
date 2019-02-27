@@ -1,0 +1,9 @@
+{
+	"scripts":{
+		"dev":"gulp dev"
+	},
+  "dependencies": {
+    "gulp-sass": "^4.0.2",
+    "gulp-webserver": "^0.9.1"
+  }
+}
