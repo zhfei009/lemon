@@ -9,11 +9,14 @@
 .total {
   position: relative;
   padding: 10px;
-  font-size: 12px; }
+  font-size: 14px; }
 
-.pay-wrap span {
-  font-size: 30px;
-  display: block; }
+.pay-wrap {
+  margin-bottom: 10px; }
+  .pay-wrap span {
+    font-size: 30px;
+    display: block;
+    padding: 5px 0; }
 
 .select-wrap {
   position: absolute;
@@ -22,7 +25,8 @@
   .select-wrap span {
     padding: 2px 10px;
     border: 1px solid #ccc;
-    border-radius: 10px; }
+    border-radius: 10px;
+    font-size: 16px; }
 
 .mui-inner-wrap {
   display: flex;

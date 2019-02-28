@@ -16,12 +16,14 @@
 .total {
 	@include pos;
 	padding: 10px;
-	font-size: 12px;
+	font-size: 14px;
 }
 .pay-wrap {
+	margin-bottom: 10px;
 	span {
 		font-size: 30px;
 		display: block;
+		padding: 5px 0;
 	}
 }
 .select-wrap {
@@ -32,11 +34,12 @@
 		padding: 2px 10px;
 		border: 1px solid #ccc;
 		border-radius: 10px;
+		font-size: 16px;
 	}
 }
 .mui-inner-wrap {
 	display: flex;
-	flex-direction: column;	
+	flex-direction: column;
 }
 .con-wrap{
 		flex: 1;
@@ -74,8 +77,7 @@
 	}
 }
 .bill-wrap{
-	@include pos;
-	
+	@include pos;	
 }
 .day-wrap{
 	h2{
@@ -102,5 +104,4 @@
 	}
 }
 .chart-wrap{
-	
 }

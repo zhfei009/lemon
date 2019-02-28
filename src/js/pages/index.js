@@ -8,7 +8,6 @@ define(['mui', 'util', 'echarts', 'picker'], (mui, util, echarts) => {
 			m: util.addZero(new Date().getMonth() + 1),
 			d: new Date().getDate()
 		};
-
 	function init() {
 		// 初始化mui
 		mui.init();
@@ -26,10 +25,14 @@ define(['mui', 'util', 'echarts', 'picker'], (mui, util, echarts) => {
 				text: '年'
 			}
 		]);
+		// 阻止侧滑切换侧边栏
+		document.querySelector('.mui-inner-wrap').addEventListener('drag', function(event) {
+			event.stopPropagation();
+		});
 		// 初始化年月框的默认时间：系统时间
 		sTime.innerHTML = now.y + '-' + now.m;
 
-		// 初始化DtPicker组件
+		// 初始化DtPicker日期组件
 		dtPicker = new mui.DtPicker({
 			type: 'month',
 			endDate: new Date(now.y, (now.m - 1), now.d), //设置结束日期 
@@ -92,9 +95,7 @@ define(['mui', 'util', 'echarts', 'picker'], (mui, util, echarts) => {
 		sTime.addEventListener('tap', function() {
 			dtPicker.show(function(selectItems) {
 
-				sTime.innerHTML = !flag ? selectItems.y.text : selectItems.y.text + '-' + selectItems.m.text;
-				console.log(selectItems.y); //{text: "2016",value: 2016} 
-				console.log(selectItems.m); //{text: "05",value: "05"} 
+				sTime.innerHTML = !flag ? selectItems.y.text : selectItems.y.text + '-' + selectItems.m.text;				
 			})
 		});
 		// 点筛选按钮
@@ -123,6 +124,14 @@ define(['mui', 'util', 'echarts', 'picker'], (mui, util, echarts) => {
 
 			});
 		})
+		// 点筛选按钮，显示侧边栏
+		showAside.addEventListener('tap', function() {
+			mui('.mui-off-canvas-wrap').offCanvas('show');
+		});
+		// 点筛选条件确定按钮，隐藏侧边栏
+		hideAside.addEventListener('tap', function() {
+			mui('.mui-off-canvas-wrap').offCanvas('close');
+		});
 	}
 	// 图表
 	function chart() {
