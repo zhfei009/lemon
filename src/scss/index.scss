@@ -1,7 +1,11 @@
 @mixin pos($p: relative) {
 	position: $p;
 }
-%hide{
+@mixin flex($d:column){
+	display:flex;
+	flex-direction: $d;
+}
+.hide{
 	display:none;
 }
 .header {
@@ -38,27 +42,65 @@
 		flex: 1;
 		display:flex;
 		flex-direction:column;
-		
+		background:#fff;
 }
 
 .con-title{
+	@include flex(row);
+	justify-content: space-between;
+	align-items: center;
 	width:100%;
 	height:44px;
-	background:red;
+	padding:0 10px;
 }
-.con-content{
-	width:100%;
-	flex:1;
-	background:skyblue;
-	&>section{
-		width:100%;
-		height:100%
+.tab-nav{
+	border:1px solid #ccc;
+	border-radius:20px;
+	overflow: hidden;
+	span{
+		display:inline-block;
+		padding:5px 18px;
+		&.active{
+			background:#fae363;
+		}
 	}
 }
-
+.con-content{
+	@include flex(row);
+	flex:1;
+	&>section{
+		width:100%;
+		flex-shrink: 0;
+	}
+}
 .bill-wrap{
 	@include pos;
+	
+}
+.day-wrap{
+	h2{
+		@include flex(row);
+		justify-content: space-between;
+		align-items: center;
+		padding:0 10px;
+		font-size:16px;
+	}
+}
+.list-item{
+	@include flex(row);
+	justify-content: space-between;
+	align-items: center;
+	
+	b:nth-child(2){
+		color:Red;
+	}
+	span{
+		background:#fae363;
+		border-radius: 50%;
+		padding:5px;
+		margin-right:10px;
+	}
 }
 .chart-wrap{
-	@extend %hide;
+	
 }
