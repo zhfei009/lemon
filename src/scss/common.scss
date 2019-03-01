@@ -1,0 +1,15 @@
+@mixin pos($p: relative) {
+	position: $p;
+}
+@mixin flex($d:column){
+	display:flex;
+	flex-direction: $d;
+}
+.hide{
+	display:none;
+}
+.header {
+	width: 100%;
+	height: 100px;
+	background: #fae363;
+}
